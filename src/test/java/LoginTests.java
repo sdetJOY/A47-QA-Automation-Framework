@@ -20,7 +20,7 @@ public class LoginTests extends BaseTest {
 //      Create fork : Make changes : Add Comment : Save
 
 //      Replace URL :
-        String url = "https://qa.koel.app/";
+        String url = "https://testpro.io/";
         driver.get(url);
         Assert.assertEquals(driver.getCurrentUrl(), url);
         driver.quit();
