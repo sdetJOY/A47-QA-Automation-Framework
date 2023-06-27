@@ -18,7 +18,9 @@ public class LoginTests extends BaseTest {
         driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
 
 //      Create fork : Make changes : Add Comment : Save
-        String url = "https://qa.koel.app/";
+
+//      Replace URL :
+        String url = "https://testpro.io";
         driver.get(url);
         Assert.assertEquals(driver.getCurrentUrl(), url);
         driver.quit();
