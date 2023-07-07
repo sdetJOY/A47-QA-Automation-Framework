@@ -10,7 +10,7 @@ import org.testng.annotations.BeforeSuite;
 
 import java.time.Duration;
 
-// Applying Inheritance, BaseTest class is parent to Homework17 child class
+// Applying Inheritance, BaseTest class is parent to Homework17.java child class
 public class BaseTest {
 
     // we declare a java attribute using the interface WebDriver
