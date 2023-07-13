@@ -20,6 +20,7 @@ public class LoginTests extends BaseTest {
 
         loginPage.login();
 
+  
        /* loginPage.provideEmail("tesfaye.abagaz@testpro.io");
         loginPage.providePassword("te$t$tudent");
         loginPage.clickSubmit();*/
