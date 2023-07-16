@@ -14,7 +14,6 @@ import java.time.Duration;
 
 public class BaseTest {
 
-    // add a comment line to create fork, and save changes
 
     public static WebDriver driver = null;
 

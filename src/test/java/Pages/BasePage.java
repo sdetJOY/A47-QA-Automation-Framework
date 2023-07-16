@@ -12,13 +12,13 @@ import java.time.Duration;
 
 public class BasePage {
 
-    public static WebDriver driver = null;
+    protected WebDriver driver;
 
-    public static WebDriverWait wait = null;
+    protected WebDriverWait wait;
 
-    public static Actions actions = null;
+    protected Actions actions;
 
-    public static String url = null;
+    //public static String url = null;
 
     public BasePage(WebDriver givenDriver) {
         driver = givenDriver;
@@ -26,11 +26,9 @@ public class BasePage {
         actions = new Actions(driver);
 
         PageFactory.initElements(driver,this);
-        // PageFactory class is used to initialize all the previously declared web elements
-        // we invoke the initElements method to locate the web elements
-        // using the Web Driver instance
+
     }
-    public WebElement findElement(By locator) {
-        return wait.until(ExpectedConditions.visibilityOfElementLocated(locator));
+    public WebElement findElement(WebElement webElement) {
+        return wait.until(ExpectedConditions.visibilityOf(webElement));
     }
 }
