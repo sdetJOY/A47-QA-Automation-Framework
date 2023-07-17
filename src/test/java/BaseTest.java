@@ -13,16 +13,10 @@ import java.time.Duration;
 
 
 public class BaseTest {
-
-
     public static WebDriver driver = null;
-
     public static WebDriverWait wait;
-
     public static String url = null;
-
     public static Actions actions = null;
-
 
     @BeforeSuite
     public static void setupClass() {
@@ -45,7 +39,6 @@ public class BaseTest {
         url = baseURL;
         navigateToPage();
     }
-
     public void navigateToPage() {
         driver.get(url);
     }
