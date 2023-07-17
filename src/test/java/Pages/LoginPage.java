@@ -2,6 +2,7 @@ package Pages;
 
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
+import org.openqa.selenium.support.CacheLookup;
 import org.openqa.selenium.support.FindBy;
 
 public class LoginPage extends BasePage {
@@ -9,23 +10,34 @@ public class LoginPage extends BasePage {
     public LoginPage(WebDriver givenDriver) {
         super(givenDriver);
     }
+
+
     @FindBy(css = "[type='email']")
-    public WebElement emailField;
+    //@CacheLookup
+    private WebElement emailField;
 
     @FindBy(css = "[type='password']")
-    public WebElement passwordField;
+    //@CacheLookup
+    private WebElement passwordField;
 
     @FindBy(css = "[type='submit']")
-    public WebElement submitBtn;
+    //@CacheLookup
+    private WebElement submitBtn;
 
-    public void provideEmail(String email) {
+
+    public LoginPage provideEmail(String email) {
         emailField.sendKeys(email);
+        return this;
     }
-    public void providePassword(String password) {
+
+    public LoginPage providePassword(String password) {
         passwordField.sendKeys(password);
+        return this;
     }
-    public void clickSubmit() {
+
+    public LoginPage clickSubmit() {
         submitBtn.click();
+      return this;
     }
     public void login() {
     provideEmail("tesfaye.abagaz@testpro.io");
