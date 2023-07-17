@@ -18,8 +18,6 @@ public class BasePage {
 
     protected Actions actions;
 
-    //public static String url = null;
-
     public BasePage(WebDriver givenDriver) {
         driver = givenDriver;
         wait = new WebDriverWait(driver, Duration.ofSeconds(5));
