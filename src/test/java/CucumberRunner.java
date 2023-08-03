@@ -7,10 +7,9 @@ import org.testng.annotations.DataProvider;
 
 
     @CucumberOptions(
-            features = {"src/test/resources/features/Login.feature"})
+            features = {"src/test/resources/features/Login.feature"}, publish = true)
 // the above line is equivalent to XML test files
-// the class CucumberRunner setup explains to TestNG
-// how we want to run our Cucumber tests
+
 // in our test setup, CucumberRunner is included in TestNG.xml
 
     public class CucumberRunner extends AbstractTestNGCucumberTests {
