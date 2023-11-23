@@ -14,13 +14,13 @@ import java.time.Duration;
 
 public class BaseTest {
 
-    public static WebDriver driver = null;
+    public static WebDriver driver;
 
     public static WebDriverWait wait;
 
-    public static String url = null;
+    public static String url;
 
-    public static Actions actions = null;
+    public static Actions actions;
 
 
     @BeforeSuite
@@ -30,7 +30,7 @@ public class BaseTest {
 
     @BeforeMethod
     @Parameters({"baseURL"})
-    public void launchBrowser(String baseURL) {
+    public void openBrowser(String baseURL) {
 
         ChromeOptions options = new ChromeOptions();
         options.addArguments("--remote-allow-origins=*");
@@ -38,6 +38,8 @@ public class BaseTest {
         driver = new ChromeDriver(options);
 
         wait = new WebDriverWait(driver, Duration.ofSeconds(2));
+
+        actions = new Actions(driver);
 
         driver.manage().window().maximize();
 

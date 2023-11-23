@@ -26,7 +26,18 @@ public class BasePage {
         PageFactory.initElements(driver,this);
 
     }
-    public WebElement findElement(WebElement webElement) {
-        return wait.until(ExpectedConditions.visibilityOf(webElement));
+    public WebElement findElement(WebElement locator) {
+        return wait.until(ExpectedConditions.visibilityOf(locator));
     }
+
+    /*lines below --- the actions commands  --- are added for homework-29
+   they are common to all pages. That is why they are specified in BasePage */
+
+    public void click (WebElement locator)  {
+        actions.click(findElement(locator)).perform();
+    }
+
+//   public void doubleClick (WebElement locator) {
+ //      actions.doubleClick(findElement(locator)).perform();
+ //   }
 }

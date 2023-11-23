@@ -20,3 +20,14 @@ test {
         suites "src/test/resources/TestNG.xml"
     }
 }
+tasks.register('SmokeTest', Test) {
+    useTestNG() {
+        suites "src/test/resources/Smoke.xml"
+    }
+}
+
+tasks.register('RegressionTest', Test) {
+    useTestNG() {
+        suites "src/test/resources/Regression.xml"
+    }
+}

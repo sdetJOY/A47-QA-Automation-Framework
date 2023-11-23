@@ -4,11 +4,14 @@
 <suite name="TestNG">
     <parameter name="baseURL" value="https://qa.koel.app/"/>
 
-    <test name="PageFactory Test" preserve-order="false">
+    <test name="Recap: Smoke and Regression Tests" preserve-order="false">
         <classes>
             <class name="LoginTests">
                 <methods>
-                    <include name="loginValidEmailPasswordTest()"/>
+                    <include name="loginValidEmailValidPasswordTest"/>
+                    <include name="loginInvalidEmailValidPasswordTest"/>
+                    <include name="loginValidEmailInvalidPasswordTest"/>
+                    <include name="loginInvalidEmailInvalidPasswordTest"/>
                 </methods>
             </class>
         </classes>
