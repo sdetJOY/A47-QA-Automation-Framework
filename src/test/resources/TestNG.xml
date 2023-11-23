@@ -2,11 +2,18 @@
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
 
 <suite name="TestNG">
+    <parameter name="baseURL" value="https://qa.koel.app/"/>
 
-    <test name="Example Test" preserve-order="false">
+    <test name="Recap: Smoke and Regression Tests" preserve-order="false">
         <classes>
-            <class name="LoginTests"/>
-            <class name="BaseTest"/>
+            <class name="LoginTests">
+                <methods>
+                    <include name="loginValidEmailValidPasswordTest"/>
+                    <include name="loginInvalidEmailValidPasswordTest"/>
+                    <include name="loginValidEmailInvalidPasswordTest"/>
+                    <include name="loginInvalidEmailInvalidPasswordTest"/>
+                </methods>
+            </class>
         </classes>
     </test>
 </suite>
